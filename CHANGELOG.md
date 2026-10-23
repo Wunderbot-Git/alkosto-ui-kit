@@ -2,6 +2,7 @@
 
 ## 1.2.0 — 2026-10-23
 
+- PNG 8× (1536×640) como original para CDN de imágenes; instrucciones para Sirv.
 - Carpeta `brand/` con el logo oficial en SVG, PNG 1x/2x/4x (fondo transparente) y PDF
   vectorial, links directos por CDN y reglas de uso.
 - `scripts/build-brand.py` genera los formatos desde el SVG del UI kit.

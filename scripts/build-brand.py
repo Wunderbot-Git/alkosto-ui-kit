@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera brand/ con el logo oficial en SVG, PNG (1x, 2x, 4x) y PDF vectorial.
+"""Genera brand/ con el logo oficial en SVG, PNG (1x, 2x, 4x, 8x) y PDF vectorial.
 
   python3 scripts/build-brand.py
 
@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "skill" / "alkosto-ui-kit" / "assets" / "logo-alkosto.svg"
 OUT = ROOT / "brand"
 W, H = 192, 80
-SCALES = {"": 1, "@2x": 2, "@4x": 4}
+SCALES = {"": 1, "@2x": 2, "@4x": 4, "@8x": 8}
 
 
 def main():

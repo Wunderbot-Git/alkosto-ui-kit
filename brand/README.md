@@ -23,8 +23,8 @@ https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto
 <img src="https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg" alt="Alkosto" height="48">
 ```
 
-El CDN puede tardar hasta 12 horas en mostrar un cambio en `@main`. Para una versión fija usa
-una etiqueta del repo en vez de `main` (por ejemplo `@v1.2.0`).
+El CDN puede tardar hasta 12 horas en mostrar un cambio en `@main`. Para una versión fija
+reemplaza `main` por el hash de un commit (por ejemplo `@df82260`).
 
 ## Reglas de uso
 

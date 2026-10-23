@@ -11,39 +11,35 @@
 
 Los PNG tienen fondo transparente; el logo trae su propio contorno blanco redondeado.
 
-## Links directos
+## Links oficiales (Sirv, CDN de Alkosto)
 
-Para incrustar el logo sin descargarlo (HTML, Notion, correos, herramientas no-code):
+Fuente preferida para incrustar el logo en cualquier lugar:
 
 ```
-https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg
-https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto@2x.png
+https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.svg
+https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png
+```
+
+El PNG es el original de 1536×640; Sirv entrega el tamaño y el formato (WebP/AVIF) que se pida:
+
+```
+https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?w=192      1x
+https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?w=384      2x (slides, correos)
+https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?h=48       alto fijo
 ```
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg" alt="Alkosto" height="48">
+<img src="https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.svg" alt="Alkosto" height="48">
+<!-- Correos (muchos clientes no muestran SVG): -->
+<img src="https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?w=384" alt="Alkosto" width="192" height="80">
 ```
 
-El CDN puede tardar hasta 12 horas en mostrar un cambio en `@main`. Para una versión fija
-reemplaza `main` por el hash de un commit (por ejemplo `@df82260`).
+No usar `format=jpg` (pierde la transparencia). Para actualizar el logo: subir los archivos
+nuevos a `UX/marca/alkosto/` en Sirv con el mismo nombre (`logo-alkosto.svg` y
+`logo-alkosto.png` = `brand/logo-alkosto@8x.png` renombrado), así los links no cambian.
 
-## En Sirv (CDN de imágenes)
-
-Subir solo dos archivos a una carpeta fija, por ejemplo `/brand/alkosto/`:
-
-- `logo-alkosto.svg` (este SVG)
-- `logo-alkosto.png` = `logo-alkosto@8x.png` renombrado (1536×640, el original de alta resolución)
-
-Sirv genera cualquier tamaño y formato desde el PNG:
-
-```
-https://<cuenta>.sirv.com/brand/alkosto/logo-alkosto.png?w=192      1x
-https://<cuenta>.sirv.com/brand/alkosto/logo-alkosto.png?w=384      2x
-https://<cuenta>.sirv.com/brand/alkosto/logo-alkosto.png?h=48       alto fijo
-```
-
-No usar `format=jpg` (pierde la transparencia). Para un logo nuevo, reemplazar los archivos
-con el mismo nombre para que los links no cambien.
+Alternativa desde GitHub (jsDelivr), útil si Sirv no está disponible:
+`https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg`
 
 ## Reglas de uso
 

@@ -53,15 +53,20 @@ presentación, `skill/alkosto-presentaciones/templates/ejemplo-*.html` (flechas 
 
 ## Logo
 
-Carpeta [`brand/`](brand/): SVG, PNG (1x, 2x, 4x) y PDF vectorial, con links directos para
-incrustar y reglas de uso.
+Links oficiales en el CDN de Alkosto (Sirv):
+
+- SVG: `https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.svg`
+- PNG: `https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?w=384` (cualquier tamaño con `?w=` o `?h=`)
+
+Carpeta [`brand/`](brand/): los mismos archivos más PNG 1x/2x/4x/8x y PDF vectorial para
+impresión, con reglas de uso.
 
 ## Usarlo sin Claude
 
 - CSS: `skill/alkosto-ui-kit/references/alkosto-tokens.css` + `alkosto-components.css`.
 - Íconos: `python3 skill/alkosto-ui-kit/scripts/icon.py carrito --size 24` o la fuente del CDN
   `https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css`.
-- Logo: carpeta `brand/` o `https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg`.
+- Logo: `https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.svg` o carpeta `brand/`.
 
 ## Mantener y actualizar
 

@@ -2,6 +2,7 @@
 
 ## 1.2.0 — 2026-10-23
 
+- Links oficiales del logo en el CDN de Alkosto (Sirv): `https://cdn.dam.alkosto.com/UX/marca/alkosto/`. El UI kit los usa para piezas en línea y correos.
 - PNG 8× (1536×640) como original para CDN de imágenes; instrucciones para Sirv.
 - Carpeta `brand/` con el logo oficial en SVG, PNG 1x/2x/4x (fondo transparente) y PDF
   vectorial, links directos por CDN y reglas de uso.

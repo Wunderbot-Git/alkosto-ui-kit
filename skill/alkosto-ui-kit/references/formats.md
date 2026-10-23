@@ -3,6 +3,9 @@
 ## Logo
 
 - Archivo: `assets/logo-alkosto.svg` (192×80, colores fijos naranja `#EB5B25`, azul `#004797`, blanco).
+- URL oficial (CDN de Alkosto): `https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.svg` y `https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png`
+  (PNG 1536×640; tamaño con `?w=` o `?h=`, p. ej. `?w=384`). Úsala cuando la pieza se publica
+  en línea; para archivos que deben funcionar sin internet (decks HTML, PDF) pega el SVG inline.
 - Insertarlo inline o como `<img>`; escalar solo proporcionalmente (`height` fijo, `width: auto`).
 - Ancho mínimo 96px en pantalla. Espacio libre alrededor ≥ la altura de la franja azul inferior.
 - Funciona sobre blanco, gris 100 y azul 500/700 (lleva su propio fondo blanco).
@@ -41,7 +44,7 @@ como base. Reglas:
 ## Correos
 
 - Ancho 600px, tablas y estilos inline (sin variables CSS: usar hex).
-- Header blanco con logo, CTA botón naranja `#EB5B25` texto blanco, footer negro con texto blanco.
+- Header blanco con logo como `<img src="https://cdn.dam.alkosto.com/UX/marca/alkosto/logo-alkosto.png?w=384" width="192" height="80" alt="Alkosto">` (no SVG: muchos clientes de correo no lo muestran), CTA botón naranja `#EB5B25` texto blanco, footer negro con texto blanco.
 
 ## Textos
 

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navegación por categorías — Alkosto</title>
+<style>
+{{tokens}}
+{{deck-css}}
+</style>
+</head>
+<body>
+<template id="alk-logo">{{logo}}</template>
+<div class="deck">
+
+  <section class="slide dark cover">
+    <div class="cover-logo">{{logo}}</div>
+    <div class="kicker">E-commerce · Ejemplo ilustrativo</div>
+    <h1 class="title">Landing pages en 4 categorías<br><span class="hl">pueden recuperar ventas perdidas en navegación</span></h1>
+    <p class="lead">Propuesta para el comité de e-commerce. Datos de ejemplo.</p>
+    <div class="meta">Equipo CRO · 23 de octubre de 2026</div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Resumen ejecutivo</div>
+    <h2 class="title">Recomendamos crear landing pages de subcategoría en cuatro categorías antes de diciembre</h2>
+    <div class="body">
+      <ol class="exec">
+        <li><span>En móvil, las subcategorías solo existen dentro del botón <b>"Filtrar"</b>: el cliente no las ve.</span></li>
+        <li><span>Cuatro categorías mezclan muchos tipos de producto en una sola página y <b>concentran la mayor salida sin clic</b>.</span></li>
+        <li><span>Una landing con accesos visuales por tipo de producto <b>acorta el camino de 4 a 2 clics</b>.</span></li>
+        <li><span>Proponemos lanzar con prueba A/B en <b>Preparación de alimentos</b> y escalar a las otras tres.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Situación</div>
+    <h2 class="title">La navegación por categorías mueve una parte relevante del tráfico móvil</h2>
+    <div class="body">
+      <div class="kpis">
+        <div class="kpi"><b>68%</b><span>Sesiones desde móvil</span></div>
+        <div class="kpi hl"><b>1 de 3</b><span>Sesiones pasan por una página de categoría</span></div>
+        <div class="kpi"><b>2,1%</b><span>Conversión móvil</span><em>-0,3 pp vs. trimestre anterior</em></div>
+      </div>
+    </div>
+    <div class="src">Datos de ejemplo · Fuente ilustrativa: Contentsquare, móvil, últimos 30 días</div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Complicación</div>
+    <h2 class="title">Preparación de alimentos tiene la mayor salida sin clic entre las categorías mixtas</h2>
+    <div class="body">
+      <div class="split">
+        <div class="bars">
+          <div class="row hl"><span class="label">Prep. de alimentos</span><div class="track"><div class="fill" style="--v:58"></div></div><span class="val">58%</span></div>
+          <div class="row"><span class="label">Juguetes</span><div class="track"><div class="fill" style="--v:51"></div></div><span class="val">51%</span></div>
+          <div class="row"><span class="label">Muebles</span><div class="track"><div class="fill" style="--v:47"></div></div><span class="val">47%</span></div>
+          <div class="row"><span class="label">Artículos de cocina</span><div class="track"><div class="fill" style="--v:44"></div></div><span class="val">44%</span></div>
+          <div class="row"><span class="label">Celulares</span><div class="track"><div class="fill" style="--v:29"></div></div><span class="val">29%</span></div>
+          <div class="row"><span class="label">Televisores</span><div class="track"><div class="fill" style="--v:26"></div></div><span class="val">26%</span></div>
+        </div>
+        <div class="takeaways">
+          <p><b>Las categorías mixtas</b> pierden casi el doble que las de un solo tipo de producto.</p>
+          <p><b>Celulares y TV</b> funcionan bien con la página actual y la barra de marcas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="src">Datos de ejemplo · % de sesiones que salen de la página de categoría sin hacer clic en un producto</div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Resolución</div>
+    <h2 class="title">Tres cambios hacen visibles los tipos de producto</h2>
+    <div class="body">
+      <div class="pillars">
+        <div class="pillar">{{icon:categories:64}}<h3>Accesos por tipo</h3><p>Tarjetas con ícono para cada tipo de producto arriba de la página.</p></div>
+        <div class="pillar hl">{{icon:filter:64}}<h3>Filtros relevantes</h3><p>Facetas propias por tipo: capacidad, potencia, presión.</p></div>
+        <div class="pillar">{{icon:search-mobile:64}}<h3>Búsqueda guiada</h3><p>Sugerencias de tipo de producto al escribir en la categoría.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Impacto esperado</div>
+    <h2 class="title">El caso base suma ventas en cuatro categorías, con Preparación de alimentos como palanca principal</h2>
+    <div class="body">
+      <div class="wf">
+        <div class="w" style="--b:0;--h:55"><b>100</b><i></i><span>Hoy</span></div>
+        <div class="w up" style="--b:55;--h:12"><b>+12</b><i></i><span>Prep. alimentos</span></div>
+        <div class="w up" style="--b:67;--h:6"><b>+6</b><i></i><span>Juguetes</span></div>
+        <div class="w up" style="--b:73;--h:5"><b>+5</b><i></i><span>Muebles</span></div>
+        <div class="w up" style="--b:78;--h:4"><b>+4</b><i></i><span>Art. cocina</span></div>
+        <div class="w total" style="--b:0;--h:82"><b>127</b><i></i><span>Potencial</span></div>
+      </div>
+    </div>
+    <div class="src">Datos de ejemplo · Índice de ventas de las cuatro categorías (hoy = 100)</div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Hoja de ruta</div>
+    <h2 class="title">Probamos en noviembre y escalamos antes de la temporada de diciembre</h2>
+    <div class="body">
+      <div class="roadmap" style="--n:4">
+        <div class="step"><div class="dot">1</div><div class="when">Sem. 1–2</div><h3>Diseño</h3><p>Landing de Preparación de alimentos.</p><div class="who">UX</div></div>
+        <div class="step hl"><div class="dot">2</div><div class="when">Sem. 3–5</div><h3>Prueba A/B</h3><p>50/50 en móvil.</p><div class="who">CRO + TI</div></div>
+        <div class="step"><div class="dot">3</div><div class="when">Sem. 6</div><h3>Decisión</h3><p>Escalar si gana.</p><div class="who">Comité</div></div>
+        <div class="step"><div class="dot">4</div><div class="when">Sem. 7–8</div><h3>Escalar</h3><p>Tres categorías más.</p><div class="who">UX + Contenido</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Decisión requerida</div>
+    <h2 class="title">Pedimos aprobar la prueba y una semana de capacidad de TI</h2>
+    <div class="body">
+      <div class="decision">
+        <div class="ask">{{icon:check:56}}<p>Aprobar la prueba A/B en Preparación de alimentos<small>Comité de e-commerce · esta semana</small></p></div>
+        <div class="ask">{{icon:calendario:56}}<p>Asignar una semana de desarrollo en noviembre<small>Gerencia de TI · antes del 3 de noviembre</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide accent section">
+    <div class="kicker">Anexo</div>
+    <h2 class="title">Detalle por categoría</h2>
+  </section>
+
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Anexo</div>
+    <h2 class="title">Las categorías mixtas tienen más tipos de producto y más uso del filtro</h2>
+    <div class="body">
+      <table class="tbl">
+        <thead><tr><th>Categoría</th><th class="num">Productos</th><th class="num">Tipos</th><th class="num">Uso de "Filtrar"</th><th>Recomendación</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Preparación de alimentos</td><td class="num">501</td><td class="num">16</td><td class="num">22%</td><td>Landing (piloto)</td></tr>
+          <tr><td>Juguetes</td><td class="num">780</td><td class="num">12</td><td class="num">18%</td><td>Landing</td></tr>
+          <tr><td>Muebles</td><td class="num">640</td><td class="num">14</td><td class="num">17%</td><td>Landing</td></tr>
+          <tr><td>Artículos de cocina</td><td class="num">420</td><td class="num">11</td><td class="num">15%</td><td>Landing</td></tr>
+          <tr><td>Celulares</td><td class="num">390</td><td class="num">2</td><td class="num">6%</td><td>Mantener</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="src">Datos de ejemplo</div>
+  </section>
+
+</div>
+<script>
+{{deck-js}}
+</script>
+</body>
+</html>

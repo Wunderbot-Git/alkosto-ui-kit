@@ -10,7 +10,9 @@
 
 ## Presentaciones — HTML 16:9
 
-Usar `examples/slide-16x9.html` como base. Reglas:
+Para decks completos usa el skill **`alkosto-presentaciones`** (pregunta formato y estilo,
+trae motor, layouts y exportación a PDF). Si no está instalado, usar `examples/slide-16x9.html`
+como base. Reglas:
 
 - Lienzo fijo 1920×1080 escalado al viewport (proporción 16:9 exacta), una `<section>` por slide.
 - Escala tipográfica de presentación (Arial):

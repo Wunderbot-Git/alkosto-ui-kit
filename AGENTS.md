@@ -1,6 +1,7 @@
 # Instrucciones para agentes que mantienen este repo
 
-- El skill vive en `skill/alkosto-ui-kit/`. Todo lo demás es tooling.
+- Los skills viven en `skill/alkosto-ui-kit/` y `skill/alkosto-presentaciones/`. Todo lo demás es tooling.
+- `alkosto-presentaciones/assets/`, sus `templates/` y su `scripts/icon.py` se generan desde el UI kit y `examples-src/`.
 - Fuentes de verdad: `tokens/alkosto-tokens.source.css`, los `.md` del skill, `examples-src/`
   y el set de íconos `ux-alkosto/icons`.
 - Archivos generados (no editar a mano): `references/alkosto-tokens.css`,

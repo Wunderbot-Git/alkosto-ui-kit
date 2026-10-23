@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Título de la presentación — Alkosto</title>
+<style>
+{{tokens}}
+{{deck-css}}
+/* ===== Estilos propios de este deck (opcional) ===== */
+</style>
+</head>
+<body>
+<!-- Logo oficial: el motor lo inserta en cada slide. No editar. -->
+<template id="alk-logo">{{logo}}</template>
+
+<!-- Estilo McKinsey: <div class="deck">  ·  Estilo niños y directivos: <div class="deck simple"> -->
+<div class="deck">
+
+  <!-- PORTADA -->
+  <section class="slide dark cover">
+    <div class="cover-logo">{{logo}}</div>
+    <div class="kicker">Área · Mes 2026</div>
+    <h1 class="title">Título de la presentación<br><span class="hl">con el mensaje clave</span></h1>
+    <p class="lead">Una línea que dice de qué se trata y qué decisión se espera.</p>
+    <div class="meta">Equipo · fecha</div>
+  </section>
+
+  <!-- SLIDE DE CONTENIDO: copia este bloque y cambia el layout del .body (ver references/layouts.md) -->
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Sección</div>
+    <h2 class="title">El título es la conclusión de la slide, en una oración</h2>
+    <div class="body">
+      <div class="split">
+        <div class="bars">
+          <div class="row"><span class="label">Categoría A</span><div class="track"><div class="fill" style="--v:82"></div></div><span class="val">82</span></div>
+          <div class="row hl"><span class="label">Categoría B</span><div class="track"><div class="fill" style="--v:64"></div></div><span class="val">64</span></div>
+          <div class="row"><span class="label">Categoría C</span><div class="track"><div class="fill" style="--v:31"></div></div><span class="val">31</span></div>
+        </div>
+        <div class="takeaways">
+          <p><b>Qué muestra:</b> una frase.</p>
+          <p><b>Por qué importa:</b> una frase.</p>
+        </div>
+      </div>
+    </div>
+    <div class="src">Fuente: herramienta, período, segmento</div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="slide">
+    <div class="bar-accent"></div>
+    <div class="kicker">Próximos pasos</div>
+    <h2 class="title">Necesitamos una decisión hoy</h2>
+    <div class="body">
+      <div class="decision">
+        <div class="ask">{{icon:check:56}}<p>La decisión concreta que se pide<small>Responsable · fecha límite</small></p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+{{deck-js}}
+</script>
+</body>
+</html>

@@ -41,6 +41,7 @@ skill/alkosto-presentaciones/  ← skill de presentaciones
   templates/                   plantilla.html + ejemplo-mckinsey.html + ejemplo-ninos-directivos.html
   scripts/export_pdf.py        HTML → PDF 16:9 (una página por slide)
   assets/                      copias de tokens, logo, íconos y motor del deck (generadas)
+brand/                         logo en SVG, PNG y PDF (generado)
 tokens/alkosto-tokens.source.css   export original de tokens (fuente de verdad)
 examples-src/<skill>/          fuentes de ejemplos y plantillas (con marcadores {{…}}); _deck.css/_deck.js = motor del deck
 scripts/build.mjs              genera archivos derivados y el ZIP
@@ -50,12 +51,17 @@ dist/*.zip                     skills empaquetados, listos para subir
 Para ver el kit abre `skill/alkosto-ui-kit/examples/kit-demo.html`; para ver los dos estilos de
 presentación, `skill/alkosto-presentaciones/templates/ejemplo-*.html` (flechas para navegar, F pantalla completa).
 
+## Logo
+
+Carpeta [`brand/`](brand/): SVG, PNG (1x, 2x, 4x) y PDF vectorial, con links directos para
+incrustar y reglas de uso.
+
 ## Usarlo sin Claude
 
 - CSS: `skill/alkosto-ui-kit/references/alkosto-tokens.css` + `alkosto-components.css`.
 - Íconos: `python3 skill/alkosto-ui-kit/scripts/icon.py carrito --size 24` o la fuente del CDN
   `https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css`.
-- Logo: `skill/alkosto-ui-kit/assets/logo-alkosto.svg`.
+- Logo: carpeta `brand/` o `https://cdn.jsdelivr.net/gh/Wunderbot-Git/alkosto-ui-kit@main/brand/logo-alkosto.svg`.
 
 ## Mantener y actualizar
 
@@ -68,6 +74,7 @@ Requiere Node 18+ y `zip`.
 | Componente nuevo o modificado | Bloques ```` ```css ```` en `references/components.md` | `node scripts/build.mjs` |
 | Reglas, colores, formatos | Archivos `.md` en `skill/alkosto-ui-kit/` | `node scripts/build.mjs` |
 | Ejemplos y plantillas | `examples-src/<skill>/*.html` | `node scripts/build.mjs` |
+| Logo nuevo | `skill/alkosto-ui-kit/assets/logo-alkosto.svg` | `node scripts/build.mjs` y `python3 scripts/build-brand.py` |
 | Motor o layouts del deck | `examples-src/alkosto-presentaciones/_deck.css` / `_deck.js` + `references/layouts.md` | `node scripts/build.mjs` |
 
 No edites a mano los archivos generados: `references/alkosto-tokens.css`,
@@ -80,7 +87,7 @@ reconstruido en el mismo commit.
 
 - Tokens: export del UI kit de Alkosto (Figma → CSS).
 - Íconos: [ux-alkosto/icons](https://github.com/ux-alkosto/icons), licencia MIT.
-- Logo: propiedad de Alkosto / Colombiana de Comercio S.A. Uso interno.
+- Logo: propiedad de Colombiana de Comercio S.A. (Alkosto). Solo para piezas de Alkosto.
 
 ## Pendiente de validar con UX
 

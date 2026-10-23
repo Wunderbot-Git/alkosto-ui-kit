@@ -7,6 +7,7 @@
 - Archivos generados (no editar a mano): `references/alkosto-tokens.css`,
   `references/alkosto-components.css`, `references/icon-names.txt`, `assets/alk-icons.json`,
   `skill/alkosto-ui-kit/examples/*.html`, `dist/alkosto-ui-kit.zip`.
+- `brand/` se genera con `python3 scripts/build-brand.py` desde el logo del UI kit.
 - Después de cualquier cambio: `node scripts/build.mjs` y commitear también los generados.
 - No inventar colores ni tokens. Lo que no viene del export se marca como "recomendación".
 - Contenido del skill en español (Colombia). Mantener `SKILL.md` corto; el detalle va en `references/`.

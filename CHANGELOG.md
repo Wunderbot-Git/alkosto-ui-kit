@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0 — 2026-10-23
+
+- Carpeta `brand/` con el logo oficial en SVG, PNG 1x/2x/4x (fondo transparente) y PDF
+  vectorial, links directos por CDN y reglas de uso.
+- `scripts/build-brand.py` genera los formatos desde el SVG del UI kit.
+
 ## 1.1.0 — 2026-10-23
 
 - Nuevo skill **alkosto-presentaciones**: decks 16:9 en HTML o PDF. Pregunta siempre formato

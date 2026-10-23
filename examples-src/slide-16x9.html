@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentación Alkosto</title>
+<style>
+{{tokens}}
+
+/* Plantilla de presentación 16:9 — lienzo fijo 1920×1080 escalado al viewport.
+   Duplica <section class="slide"> para cada slide. Flechas / espacio para navegar. */
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; background: #1b1b1b; overflow: hidden; }
+body { font-family: var(--font-family); color: var(--alkosto-gray-900); }
+.deck { position: absolute; top: 50%; left: 50%; width: 1920px; height: 1080px; transform-origin: center; }
+.slide { position: absolute; inset: 0; display: none; padding: 120px 140px 110px; background: var(--alkosto-gray-0); overflow: hidden; }
+.slide.active { display: flex; flex-direction: column; }
+
+/* Elementos comunes */
+.slide .logo { position: absolute; top: 48px; right: 64px; height: 56px; }
+.slide .logo svg { display: block; height: 100%; width: auto; }
+.slide .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: var(--alkosto-primary-500); }
+.slide .num { position: absolute; bottom: 44px; right: 64px; font-size: 16px; color: var(--alkosto-gray-500); }
+.slide .src { position: absolute; bottom: 44px; left: 140px; font-size: 16px; color: var(--alkosto-gray-500); }
+.kicker { font-size: 22px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--alkosto-primary-500); margin-bottom: 16px; }
+h1 { font-size: 72px; line-height: 1.1; font-weight: 700; }
+h2 { font-size: 44px; line-height: 1.15; font-weight: 700; color: var(--alkosto-secondary-500); max-width: 1500px; }
+.sub { font-size: 28px; line-height: 1.35; color: var(--alkosto-gray-700); margin-top: 24px; max-width: 1400px; }
+.body { font-size: 24px; line-height: 1.45; }
+
+/* Portada */
+.cover { background: var(--alkosto-secondary-500); color: var(--alkosto-gray-0); justify-content: center; }
+.cover .logo { left: 140px; right: auto; top: 96px; height: 80px; }
+.cover h1 span { color: var(--alkosto-primary-500); }
+.cover .sub { color: var(--alkosto-secondary-100); }
+.cover .meta { position: absolute; bottom: 96px; left: 140px; font-size: 22px; color: var(--alkosto-secondary-200); }
+.cover::after { content: ""; position: absolute; right: 0; bottom: 0; width: 640px; height: 24px; background: var(--alkosto-primary-500); }
+
+/* Separador de sección */
+.section { background: var(--alkosto-primary-500); color: var(--alkosto-gray-0); justify-content: center; }
+.section .kicker { color: var(--alkosto-primary-50); }
+.section h2 { color: var(--alkosto-gray-0); font-size: 64px; }
+
+/* Contenido: lista con íconos */
+.points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 64px; }
+.point { padding: 40px; border: 1px solid var(--alkosto-gray-200); border-radius: 4px; }
+.point .alk-icon { color: var(--alkosto-secondary-500); margin-bottom: 24px; }
+.point h3 { font-size: 28px; color: var(--alkosto-gray-900); margin-bottom: 12px; }
+.point p { font-size: 22px; line-height: 1.45; color: var(--alkosto-gray-700); }
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 72px; }
+.kpi { padding: 48px 40px; background: var(--alkosto-secondary-50); border-radius: 4px; }
+.kpi b { display: block; font-size: 96px; line-height: 1; color: var(--alkosto-secondary-500); }
+.kpi span { display: block; font-size: 24px; margin-top: 16px; color: var(--alkosto-gray-700); }
+.kpi em { font-style: normal; font-weight: 700; font-size: 22px; color: var(--alkosto-secondary-500); }
+.kpi em.neg { color: var(--alkosto-extended-red-500); }
+.kpi.hl { background: var(--alkosto-primary-50); }
+.kpi.hl b { color: var(--alkosto-primary-500); }
+
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+  html, body { background: none; overflow: visible; height: auto; }
+  .deck { position: static; transform: none !important; }
+  .slide { position: relative; display: flex !important; flex-direction: column; width: 1920px; height: 1080px; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <section class="slide cover active">
+    <div class="logo">{{logo}}</div>
+    <div class="kicker" style="color:var(--alkosto-primary-300)">E-commerce · Q4 2026</div>
+    <h1>Título de la presentación<br><span>con el mensaje clave</span></h1>
+    <p class="sub">Subtítulo que explica en una línea de qué se trata y qué decisión se espera.</p>
+    <div class="meta">Equipo E-commerce · 23 de octubre de 2026</div>
+  </section>
+
+  <section class="slide section">
+    <div class="kicker">01</div>
+    <h2>Diagnóstico</h2>
+  </section>
+
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="logo">{{logo}}</div>
+    <div class="kicker">Hallazgos</div>
+    <h2>El título de cada slide es la conclusión, no el tema</h2>
+    <div class="points">
+      <div class="point">{{icon:carrito:56}}<h3>Carrito</h3><p>Un hallazgo concreto con su dato y su implicación.</p></div>
+      <div class="point">{{icon:rastrear-orden:56}}<h3>Entrega</h3><p>Un hallazgo concreto con su dato y su implicación.</p></div>
+      <div class="point">{{icon:credit-card:56}}<h3>Pago</h3><p>Un hallazgo concreto con su dato y su implicación.</p></div>
+    </div>
+    <div class="src">Fuente: indicar la fuente de los datos</div>
+    <div class="num">3</div>
+  </section>
+
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="logo">{{logo}}</div>
+    <div class="kicker">Resultados</div>
+    <h2>La conversión móvil subió 0,4 puntos tras el nuevo checkout</h2>
+    <div class="kpis">
+      <div class="kpi hl"><b>2,1%</b><span>Conversión móvil</span><em>+0,4 pp vs. Q3</em></div>
+      <div class="kpi"><b>$420K</b><span>Ticket promedio</span><em>+6%</em></div>
+      <div class="kpi"><b>38%</b><span>Abandono en pago</span><em class="neg">+2 pp</em></div>
+    </div>
+    <div class="src">Datos de ejemplo</div>
+    <div class="num">4</div>
+  </section>
+
+</div>
+<script>
+const deck = document.querySelector('.deck');
+const slides = [...document.querySelectorAll('.slide')];
+let i = 0;
+function fit() {
+  const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+  deck.style.transform = `translate(-50%, -50%) scale(${s})`;
+}
+function go(n) {
+  i = Math.max(0, Math.min(slides.length - 1, n));
+  slides.forEach((s, k) => s.classList.toggle('active', k === i));
+}
+addEventListener('resize', fit);
+addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'PageDown', ' '].includes(e.key)) go(i + 1);
+  if (['ArrowLeft', 'PageUp'].includes(e.key)) go(i - 1);
+});
+addEventListener('click', (e) => go(e.clientX > innerWidth / 2 ? i + 1 : i - 1));
+fit();
+</script>
+</body>
+</html>

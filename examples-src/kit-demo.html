@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alkosto UI Kit</title>
+<style>
+{{tokens}}
+{{components}}
+
+/* Solo para esta página de referencia */
+.demo-header { background: var(--alkosto-secondary-500); padding: var(--spacing-16) var(--spacing-24); display: flex; align-items: center; gap: var(--spacing-16); }
+.demo-header svg:first-child { height: 48px; width: auto; }
+.demo-header span { color: var(--alkosto-gray-0); font-weight: 700; font-size: var(--typography-heading-h2); }
+main { max-width: 1120px; margin: 0 auto; padding: var(--spacing-32) var(--spacing-16) var(--spacing-64); }
+section { margin-bottom: var(--spacing-48); }
+section > h2 { padding-bottom: var(--spacing-8); border-bottom: 1px solid var(--alkosto-gray-200); margin-bottom: var(--spacing-24); }
+.row { display: flex; flex-wrap: wrap; gap: var(--spacing-16); align-items: flex-start; }
+.stack { display: grid; gap: var(--spacing-12); }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: var(--spacing-12); }
+.sw { border: 1px solid var(--alkosto-gray-200); border-radius: var(--radius-sm); overflow: hidden; font-size: var(--typography-body-small); }
+.sw i { display: block; height: 56px; }
+.sw div { padding: var(--spacing-8); }
+.sw b { display: block; color: var(--alkosto-gray-900); }
+.sw code { color: var(--alkosto-gray-700); }
+.type p { margin: 0 0 var(--spacing-8); }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--spacing-16); }
+.icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: var(--spacing-12); color: var(--alkosto-secondary-500); }
+.icons div { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-8); padding: var(--spacing-12); border: 1px solid var(--alkosto-gray-200); border-radius: var(--radius-sm); }
+.icons small { color: var(--alkosto-gray-700); font-size: 11px; }
+.img-ph { aspect-ratio: 1; background: var(--alkosto-gray-100); border-radius: var(--radius-sm); display: grid; place-items: center; color: var(--alkosto-gray-500); }
+.list { max-width: 420px; border: 1px solid var(--alkosto-gray-200); border-radius: var(--radius-sm); }
+.list .alk-list-btn:last-child { border-bottom: 0; }
+.demo-footer { background: #000; color: #fff; padding: var(--spacing-24); text-align: center; font-size: var(--typography-body-small); }
+</style>
+</head>
+<body>
+<header class="demo-header">{{logo}}<span>UI Kit</span></header>
+<main>
+
+<section>
+  <h1>Alkosto UI Kit</h1>
+  <p>Referencia visual de tokens y componentes. Todo en esta página usa las variables de <code>alkosto-tokens.css</code> y las clases de <code>alkosto-components.css</code>.</p>
+</section>
+
+<section>
+  <h2>Colores de marca</h2>
+  <div class="swatches">
+    <div class="sw"><i style="background:var(--alkosto-primary-500)"></i><div><b>Primary 500</b><code>#EB5B25</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-primary-700)"></i><div><b>Primary 700</b><code>#B14B25</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-primary-300)"></i><div><b>Primary 300</b><code>#F5AD92</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-primary-50)"></i><div><b>Primary 50</b><code>#FDEEE9</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-secondary-500)"></i><div><b>Secondary 500</b><code>#004797</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-secondary-700)"></i><div><b>Secondary 700</b><code>#06376F</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-secondary-300)"></i><div><b>Secondary 300</b><code>#709AC6</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-secondary-50)"></i><div><b>Secondary 50</b><code>#EDF1F6</code></div></div>
+  </div>
+  <h3 style="margin-top:var(--spacing-24)">Grises y estados</h3>
+  <div class="swatches">
+    <div class="sw"><i style="background:var(--alkosto-gray-900)"></i><div><b>Gray 900</b><code>#444444</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-gray-700)"></i><div><b>Gray 700</b><code>#5C5C5C</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-gray-500)"></i><div><b>Gray 500</b><code>#959595</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-gray-200)"></i><div><b>Gray 200</b><code>#E0E0E0</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-gray-100)"></i><div><b>Gray 100</b><code>#F5F5F5</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-extended-red-500)"></i><div><b>Error</b><code>#DD171B</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-extended-yellow-600)"></i><div><b>Alerta</b><code>#ECBA18</code></div></div>
+    <div class="sw"><i style="background:var(--alkosto-extended-green-500)"></i><div><b>Disponible</b><code>#1DA04E</code></div></div>
+  </div>
+</section>
+
+<section class="type">
+  <h2>Tipografía — Arial</h2>
+  <p style="font-size:var(--typography-body-x-large);font-weight:700">$1.299.900 · 32px</p>
+  <p style="font-size:var(--typography-heading-h1);font-weight:700;color:var(--alkosto-secondary-500)">Título H1 · 24px</p>
+  <p style="font-size:var(--typography-heading-h2);font-weight:700;color:var(--alkosto-secondary-500)">Título H2 · 18px</p>
+  <p style="font-size:var(--typography-heading-h3);font-weight:700;color:var(--alkosto-secondary-500)">Título H3 · 16px</p>
+  <p style="font-size:var(--typography-body-main)">Cuerpo principal 14px. Compra en línea y recibe en casa o recoge en tienda.</p>
+  <p style="font-size:var(--typography-body-small);color:var(--alkosto-gray-700)">Texto pequeño 12px para notas y condiciones.</p>
+</section>
+
+<section>
+  <h2>Botones y links</h2>
+  <div class="row">
+    <button class="alk-btn alk-btn--primary">{{icon:carrito:20}} Agregar al carrito</button>
+    <button class="alk-btn alk-btn--secondary">Comprar ahora</button>
+    <button class="alk-btn alk-btn--primary" disabled>No disponible</button>
+    <a class="alk-link" href="#">Ver todos los productos</a>
+  </div>
+</section>
+
+<section>
+  <h2>Formularios</h2>
+  <div class="row">
+    <div class="stack" style="width:320px">
+      <label class="alk-field">
+        <span class="alk-field__label">Correo electrónico</span>
+        <input class="alk-input" type="email" placeholder="nombre@correo.com">
+        <span class="alk-field__help">Te enviaremos la confirmación de tu pedido.</span>
+      </label>
+      <label class="alk-field alk-field--error">
+        <span class="alk-field__label">Celular</span>
+        <input class="alk-input" value="300 12" aria-invalid="true">
+        <span class="alk-field__help">Ingresa un número de 10 dígitos.</span>
+      </label>
+    </div>
+    <div class="stack">
+      <span class="alk-field__label">Código de verificación</span>
+      <div class="alk-otp"><input value="4" placeholder=" "><input value="8" placeholder=" "><input placeholder=" "><input placeholder=" "></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Alertas</h2>
+  <div class="stack" style="max-width:560px">
+    <div class="alk-alert alk-alert--success" role="status">{{icon:check:20}}<div><strong>¡Listo!</strong> Tu pedido fue confirmado.</div></div>
+    <div class="alk-alert alk-alert--info" role="status">{{icon:informacion:20}}<div>Puedes recoger tu compra en tienda sin costo.</div></div>
+    <div class="alk-alert alk-alert--alert" role="status">{{icon:warning:20}}<div>Quedan pocas unidades en tu ciudad.</div></div>
+    <div class="alk-alert alk-alert--error" role="alert">{{icon:i-warning:20}}<div>No pudimos procesar el pago. Intenta con otro medio.</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Badges</h2>
+  <div class="row">
+    <span class="alk-badge alk-badge--sameday">{{icon:same-day:16}} Entrega el mismo día</span>
+    <span class="alk-badge alk-badge--notaxes">Sin IVA</span>
+    <span class="alk-badge alk-badge--discount">-25%</span>
+    <span class="alk-badge alk-badge--promo">Exclusivo online</span>
+    <span class="alk-badge alk-badge--count">3</span>
+  </div>
+</section>
+
+<section>
+  <h2>Cards de producto</h2>
+  <div class="grid-cards">
+    <article class="alk-card">
+      <span class="alk-badge alk-badge--discount" style="align-self:flex-start">-19%</span>
+      <div class="img-ph" style="color:var(--alkosto-gray-500)">{{icon:televisores:64}}</div>
+      <h3 class="alk-card__title">Televisor 55" UHD 4K Smart TV con control por voz</h3>
+      <div class="alk-rating" aria-label="4 de 5 estrellas">{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella:16}}<span class="alk-rating__count">(128)</span></div>
+      <div class="alk-price"><span class="alk-price__before">$2.599.900</span><span class="alk-price__now">$2.099.900</span><span class="alk-price__save">Ahorras $500.000</span></div>
+      <span class="alk-badge alk-badge--sameday" style="align-self:flex-start">Entrega el mismo día</span>
+      <button class="alk-btn alk-btn--primary">Agregar al carrito</button>
+    </article>
+    <article class="alk-card">
+      <span class="alk-badge alk-badge--notaxes" style="align-self:flex-start">Sin IVA</span>
+      <div class="img-ph">{{icon:portatiles:64}}</div>
+      <h3 class="alk-card__title">Portátil 15,6" Intel Core i5 16GB RAM 512GB SSD</h3>
+      <div class="alk-rating" aria-label="5 de 5 estrellas">{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}{{icon:estrella-relleno:16}}<span class="alk-rating__count">(42)</span></div>
+      <div class="alk-price"><span class="alk-price__now">$2.749.900</span></div>
+      <button class="alk-btn alk-btn--secondary">Comprar ahora</button>
+    </article>
+    <article class="alk-card">
+      <div class="img-ph">{{icon:lavadora:64}}</div>
+      <h3 class="alk-card__title">Lavadora carga superior 19 kg gris</h3>
+      <div class="alk-price"><span class="alk-price__before">$1.899.900</span><span class="alk-price__now">$1.599.900</span><span class="alk-price__save">Ahorras $300.000</span></div>
+      <button class="alk-btn alk-btn--primary" disabled>Agotado</button>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Lista de opciones</h2>
+  <div class="list">
+    <button class="alk-list-btn">{{icon:rastrear-orden}} Rastrear mi pedido <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="alk-list-btn">{{icon:garantia}} Garantías <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="alk-list-btn">{{icon:cambio-devoluciones}} Cambios y devoluciones <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
+</section>
+
+<section>
+  <h2>Íconos oficiales (muestra)</h2>
+  <div class="icons">
+    <div>{{icon:carrito:32}}<small>carrito</small></div>
+    <div>{{icon:rastrear-orden:32}}<small>rastrear-orden</small></div>
+    <div>{{icon:same-day:32}}<small>same-day</small></div>
+    <div>{{icon:tarjeta-alkosto:32}}<small>tarjeta-alkosto</small></div>
+    <div>{{icon:pse:32}}<small>pse</small></div>
+    <div>{{icon:garantia:32}}<small>garantia</small></div>
+    <div>{{icon:nuestras-tiendas:32}}<small>nuestras-tiendas</small></div>
+    <div>{{icon:customer-contact:32}}<small>customer-contact</small></div>
+    <div>{{icon:celular:32}}<small>celular</small></div>
+    <div>{{icon:nevecon:32}}<small>nevecon</small></div>
+    <div>{{icon:videojuegos:32}}<small>videojuegos</small></div>
+    <div>{{icon:ia:32}}<small>ia</small></div>
+  </div>
+</section>
+
+</main>
+<footer class="demo-footer">Alkosto UI Kit · tokens oficiales · íconos ux-alkosto/icons (MIT)</footer>
+</body>
+</html>
